@@ -18,7 +18,7 @@ let vtbInfosService: VtbInfoService
 let mainWindow: BrowserWindow
 let bestCDN: string
 const playerObjMap = new ContextMap<number, PlayerObj>()
-const isDevelopment = process.env.NODE_ENV !== 'production'
+const isDevelopment = import.meta.env.NODE_ENV !== 'production'
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([
@@ -236,7 +236,7 @@ app.on('activate', async () => {
 
 // Some APIs can only be used after this event occurs.
 app.on('ready', async () => {
-  if (isDevelopment && !process.env.IS_TEST) {
+  if (isDevelopment && !import.meta.env.IS_TEST) {
     // Install Vue Devtools
     try {
       await installExtension(VUEJS_DEVTOOLS)

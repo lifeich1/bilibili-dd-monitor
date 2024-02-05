@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import VtbListItem from '../components/VtbListItem'
+import VtbListItem from '../components/VtbListItem.vue'
 import VirtualList from 'vue-virtual-scroll-list'
 import { FollowListService, LivePlayService } from '@/app/services/index'
 import { mapGetters } from 'vuex'

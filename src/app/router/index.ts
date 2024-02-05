@@ -43,8 +43,8 @@ const routes: Array<RouteConfig> = [
 
 const router = new VueRouter({
   // https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/commonIssues.html#blank-screen-on-builds-but-works-fine-on-serve
-  mode: process.env.IS_ELECTRON ? 'hash' : 'history',
-  base: process.env.BASE_URL,
+  mode: import.meta.env.IS_ELECTRON ? 'hash' : 'history',
+  base: import.meta.env.BASE_URL,
   routes,
   linkActiveClass: '' // to fix home page class bug
 })

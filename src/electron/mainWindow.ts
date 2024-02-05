@@ -21,17 +21,17 @@ export const createMainWindow = async (app: Electron.App, playerObjMap: ContextM
     webPreferences: {
       // Use pluginOptions.nodeIntegration, leave this alone
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
-      nodeIntegration: (process.env.ELECTRON_NODE_INTEGRATION as unknown) as boolean,
+      nodeIntegration: (import.meta.env.ELECTRON_NODE_INTEGRATION as unknown) as boolean,
       contextIsolation: false,
       webSecurity: false, // fix connect_error Error: websocket error
       preload: path.join(__dirname, 'preload.js')
     }
   })
 
-  if (process.env.WEBPACK_DEV_SERVER_URL) {
+  if (import.meta.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode
-    await win.loadURL(process.env.WEBPACK_DEV_SERVER_URL as string)
-    if (!process.env.IS_TEST) win.webContents.openDevTools()
+    await win.loadURL(import.meta.env.WEBPACK_DEV_SERVER_URL as string)
+    if (!import.meta.env.IS_TEST) win.webContents.openDevTools()
   } else {
     createProtocol('app')
     // Load the index.html when not in development
