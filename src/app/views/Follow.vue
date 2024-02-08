@@ -82,7 +82,7 @@
 </template>
 
 <script>
-import { FollowListService } from '@/app/services'
+import { FollowListService } from '../services'
 import { mapGetters } from 'vuex'
 
 export default {

@@ -3,7 +3,7 @@ import { Store } from 'vuex'
 import store from '../../store'
 import { UpdateInfo } from 'electron-updater'
 import { ProgressInfo } from 'builder-util-runtime'
-import { slog } from '@/app/utils/helpers'
+import { slog } from '../../utils/helpers'
 
 declare const window: any
 

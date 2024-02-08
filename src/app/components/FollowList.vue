@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import { FollowListService, LivePlayService } from '@/app/services'
+import { FollowListService, LivePlayService } from '../services'
 import { mapGetters } from 'vuex'
 import FollowListItem from './FollowListItem'
 import VirtualList from 'vue-virtual-scroll-list'

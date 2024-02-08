@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import { LivePlayService } from '@/app/services'
+import { LivePlayService } from '../services'
 import { mapGetters } from 'vuex'
 
 export default {

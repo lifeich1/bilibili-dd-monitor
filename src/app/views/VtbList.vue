@@ -28,10 +28,10 @@
 <script>
 import VtbListItem from '../components/VtbListItem.vue'
 import VirtualList from 'vue-virtual-scroll-list'
-import { FollowListService, LivePlayService } from '@/app/services/index'
+import { FollowListService, LivePlayService } from '../services/index'
 import { mapGetters } from 'vuex'
 import _ from 'lodash'
-import { _compareByOnlineDesc } from '@/app/utils/helpers'
+import { _compareByOnlineDesc } from '../utils/helpers'
 
 export default {
   name: 'VtbList',

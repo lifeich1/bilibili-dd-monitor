@@ -1,8 +1,8 @@
 // import Vue from 'vue'
 import { createStore } from 'vuex'
-import { FollowList, VtbInfo } from '@/interfaces'
+import { FollowList, VtbInfo } from '../../interfaces'
 import { UpdateInfo } from 'electron-updater'
-import { _compareByOnlineDesc } from '@/app/utils/helpers'
+import { _compareByOnlineDesc } from '../utils/helpers'
 
 // Vue.use(Vuex)
 

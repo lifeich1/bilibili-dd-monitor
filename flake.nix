@@ -22,6 +22,7 @@
               nodejs_20
               corepack
               python3
+              electron_28
               (runCommand "cn-pnpm"
                 {
                   buildInputs = [

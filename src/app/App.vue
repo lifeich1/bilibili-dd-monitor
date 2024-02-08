@@ -77,7 +77,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import VueShield from '@/app/components/VueShield.vue'
+import VueShield from './components/VueShield.vue'
 
 const ipcRenderer = window.ipcRenderer
 

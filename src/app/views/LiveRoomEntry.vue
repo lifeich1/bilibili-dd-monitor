@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { LivePlayService, SearchHistoryService, RoomService, FollowListService } from '@/app/services'
+import { LivePlayService, SearchHistoryService, RoomService, FollowListService } from '../services'
 import { mapGetters } from 'vuex'
 
 export default {

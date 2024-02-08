@@ -32,8 +32,10 @@ export const createMainWindow = async (app: Electron.App, playerObjMap: ContextM
   // Load the remote URL for development or the local html file for production.
   if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
     win.loadURL(process.env['ELECTRON_RENDERER_URL'])
+    console.log('win loadURL ', process.env['ELECTRON_RENDERER_URL']);
   } else {
     win.loadFile(join(__dirname, '../../index.html'))
+    console.log('win loadFile ', join(__dirname, '../../index.html'));
   }
 
   // menu

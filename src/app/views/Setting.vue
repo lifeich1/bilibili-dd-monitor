@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import SettingService from '@/app/services/SettingService'
+import SettingService from '../services/SettingService'
 
 export default {
   name: 'Setting',

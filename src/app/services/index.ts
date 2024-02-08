@@ -1,14 +1,14 @@
-import SettingService from '@/app/services/SettingService'
-import FollowListService from '@/app/services/FollowListService'
-import LivePlayService from '@/app/services/LivePlayService'
-import SearchHistoryService from '@/app/services/SearchHistoryService'
-import RoomService from '@/app/services/RoomService'
+import SettingService from './SettingService'
+import FollowListService from './FollowListService'
+import LivePlayService from './LivePlayService'
+import SearchHistoryService from './SearchHistoryService'
+import RoomService from './RoomService'
 
-import CDNListener from '@/app/services/listeners/CDNListener'
-import NoticeListener from '@/app/services/listeners/NoticeListener'
-import PlayerWindowCountListener from '@/app/services/listeners/PlayerWindowCountListener'
-import VtbInfoUpdateListener from '@/app/services/listeners/VtbInfoUpdateListener'
-import AppUpdateListener from '@/app/services/listeners/AppUpdateListener'
+import CDNListener from './listeners/CDNListener'
+import NoticeListener from './listeners/NoticeListener'
+import PlayerWindowCountListener from './listeners/PlayerWindowCountListener'
+import VtbInfoUpdateListener from './listeners/VtbInfoUpdateListener'
+import AppUpdateListener from './listeners/AppUpdateListener'
 
 export {
   SettingService,
