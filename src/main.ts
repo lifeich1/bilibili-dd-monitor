@@ -9,7 +9,7 @@ import {
   NoticeListener,
   PlayerWindowCountListener,
   VtbInfoUpdateListener
-} from '@/app/services'
+} from './app/services'
 
 // import font awesome icon
 // https://github.com/FortAwesome/vue-fontawesome#installation
@@ -35,11 +35,11 @@ import vSelect from 'vue-select'
 import 'vue-select/dist/vue-select.css'
 
 // https://github.com/euvl/vue-notification/
-import Notifications from 'vue-notification'
+// import Notifications from 'vue-notification'
 import { FollowList } from '@/interfaces'
 
-import OrbitSpinner from '@/app/components/OrbitSpinner.vue'
-import { slog } from '@/app/utils/helpers'
+import OrbitSpinner from './app/components/OrbitSpinner.vue'
+import { slog } from './app/utils/helpers'
 
 library.add(
   faSignal,
@@ -63,7 +63,7 @@ Vue.component('orbit-spinner', OrbitSpinner)
 
 Vue.config.productionTip = false
 
-Vue.use(Notifications)
+// Vue.use(Notifications)
 
 Vue.mixin({
   methods: {
@@ -73,8 +73,8 @@ Vue.mixin({
         // @ts-ignore
         position: 'top',
         duration: 1500,
-        type: type,
-        text: text
+        type,
+        text
       })
     }
   }

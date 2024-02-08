@@ -1,7 +1,7 @@
 import { dialog, Menu, MenuItem, screen, shell } from 'electron'
-import { PlayerObj } from '@/interfaces'
-import { checkForUpdates } from '@/electron/updater'
-import ContextMap from '@/electron/utils/ContextMap'
+import { PlayerObj } from '../interfaces'
+import { checkForUpdates } from './updater'
+import ContextMap from './utils/ContextMap'
 
 export const createMainWindowMenu = (app: Electron.App, players: ContextMap<number, PlayerObj>) => {
   const primaryDisplays: Electron.Display[] = screen.getAllDisplays()

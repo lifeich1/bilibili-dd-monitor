@@ -2,16 +2,16 @@
 
 import { app, protocol, BrowserWindow, ipcMain, IpcMainEvent, nativeImage, Tray, Menu } from 'electron'
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer'
-import { configureSettings } from '@/electron/utils/OldGlobalSettings'
+import { configureSettings } from './electron/utils/OldGlobalSettings'
 import { autoUpdater } from 'electron-updater'
 
-import { FollowListService, SettingService, VtbInfoService, RoomService } from '@/electron/services'
+import { FollowListService, SettingService, VtbInfoService, RoomService } from './electron/services'
 import { FollowListItem, PlayerObj, VtbInfo } from '@/interfaces'
-import { createPlayerWindow } from '@/electron/playerWindow'
-import { createMainWindow } from '@/electron/mainWindow'
-import ContextMap from '@/electron/utils/ContextMap'
+import { createPlayerWindow } from './electron/playerWindow'
+import { createMainWindow } from './electron/mainWindow'
+import ContextMap from './electron/utils/ContextMap'
 import log from 'pretty-log'
-import CDN from '@/electron/utils/CDN'
+import CDN from './electron/utils/CDN'
 import path from 'path'
 
 let vtbInfosService: VtbInfoService

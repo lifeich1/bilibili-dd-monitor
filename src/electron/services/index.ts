@@ -1,6 +1,6 @@
-import { VtbInfoService } from '@/electron/services/VtbInfoService'
-import { FollowListService } from '@/electron/services/FollowListService'
-import { SettingService } from '@/electron/services/SettingService'
-import { RoomService } from '@/electron/services/RoomService'
+import { VtbInfoService } from './VtbInfoService'
+import { FollowListService } from './FollowListService'
+import { SettingService } from './SettingService'
+import { RoomService } from './RoomService'
 
 export { VtbInfoService, FollowListService, SettingService, RoomService }

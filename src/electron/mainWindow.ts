@@ -1,9 +1,9 @@
 import { app, BrowserWindow, Menu } from 'electron'
 import path from 'path'
-import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
+// import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import { PlayerObj } from '@/interfaces'
-import { createMainWindowMenu } from '@/electron/mainWindowMenu'
-import ContextMap from '@/electron/utils/ContextMap'
+import { createMainWindowMenu } from './mainWindowMenu'
+import ContextMap from './utils/ContextMap'
 
 const mainWindowIconPath = 'public/icons/icon.ico'
 
@@ -28,14 +28,12 @@ export const createMainWindow = async (app: Electron.App, playerObjMap: ContextM
     }
   })
 
-  if (import.meta.env.WEBPACK_DEV_SERVER_URL) {
-    // Load the url of the dev server if in development mode
-    await win.loadURL(import.meta.env.WEBPACK_DEV_SERVER_URL as string)
-    if (!import.meta.env.IS_TEST) win.webContents.openDevTools()
+  // HMR for renderer base on electron-vite cli.
+  // Load the remote URL for development or the local html file for production.
+  if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
+    win.loadURL(process.env['ELECTRON_RENDERER_URL'])
   } else {
-    createProtocol('app')
-    // Load the index.html when not in development
-    await win.loadURL('app://./index.html')
+    win.loadFile(join(__dirname, '../../index.html'))
   }
 
   // menu

@@ -1,25 +1,16 @@
+require('@rushstack/eslint-patch/modern-module-resolution')
+
 module.exports = {
-  root: true,
-  env: {
-    node: true,
-    es2022: true
-  },
   extends: [
-    'plugin:vue/essential',
-    '@vue/standard',
-    '@vue/typescript/recommended'
+    'eslint:recommended',
+    'plugin:vue/vue3-recommended',
+    '@electron-toolkit',
+    '@electron-toolkit/eslint-config-ts/eslint-recommended',
+    '@vue/eslint-config-typescript/recommended',
+    '@vue/eslint-config-prettier'
   ],
-  parserOptions: {
-    ecmaVersion: 2020
-  },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-useless-constructor': 'off',
-    '@typescript-eslint/ban-ts-ignore': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
-    '@typescript-eslint/no-useless-constructor': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off'
+    'vue/require-default-prop': 'off',
+    'vue/multi-word-component-names': 'off'
   }
 }

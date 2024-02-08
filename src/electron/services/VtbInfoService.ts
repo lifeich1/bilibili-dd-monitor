@@ -1,6 +1,6 @@
 import io from 'socket.io-client'
-import { FollowList, VtbInfo } from '@/interfaces'
-import { FollowListService } from '@/electron/services/index'
+import { FollowList, VtbInfo } from '../../interfaces'
+import { FollowListService } from './index'
 import vtbInfosMock from '../../../test/sample/VtbInfos.json'
 
 export class VtbInfoService {

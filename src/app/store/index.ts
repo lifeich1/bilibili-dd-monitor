@@ -1,12 +1,12 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+// import Vue from 'vue'
+import { createStore } from 'vuex'
 import { FollowList, VtbInfo } from '@/interfaces'
 import { UpdateInfo } from 'electron-updater'
 import { _compareByOnlineDesc } from '@/app/utils/helpers'
 
-Vue.use(Vuex)
+// Vue.use(Vuex)
 
-export default new Vuex.Store({
+export default createStore({
   state: {
     vtbInfos: [] as Array<VtbInfo>,
     followLists: [] as Array<FollowList>,
