@@ -19,6 +19,9 @@ let mainWindow: BrowserWindow
 let bestCDN: string
 const playerObjMap = new ContextMap<number, PlayerObj>()
 const isDevelopment = import.meta.env.NODE_ENV !== 'production'
+console.log('isDev:', isDevelopment)
+
+// console.log('app:', app)
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([
@@ -346,3 +349,5 @@ if (isDevelopment) {
     })
   }
 }
+
+console.log("EL of src/background.ts")
