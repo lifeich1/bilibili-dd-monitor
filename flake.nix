@@ -17,7 +17,7 @@
           };
         in
         {
-          src = pkgs.mkShell {
+          dev = pkgs.mkShell {
             packages = with pkgs; [
               nodejs_20
               corepack
@@ -39,7 +39,7 @@
               '')
             ];
             shellHook = ''
-              _elec=./node_modules/.pnpm/electron@28.2.1/node_modules/electron/dist/electron
+              _elec=./node_modules/.pnpm/electron@28.2.3/node_modules/electron/dist/electron
               test -L $_elec \
                 || mv $_elec $_elec.backup
               rm -f $_elec
